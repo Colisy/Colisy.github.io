@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="ZH-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,html," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="移动端页面开发资源总结及技巧工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。一、meta标签1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）1&amp;lt;meta name=&apos;viewport&apos; content=&apos;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-sc">
+<meta name="keywords" content="css,html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端页面开发总结">
+<meta property="og:url" content="https://colisy.github.io/mobile/index.html">
+<meta property="og:site_name" content="每天进步一点点">
+<meta property="og:description" content="移动端页面开发资源总结及技巧工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。一、meta标签1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）1&amp;lt;meta name=&apos;viewport&apos; content=&apos;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-sc">
+<meta property="og:locale" content="ZH-CN">
+<meta property="og:updated_time" content="2018-03-08T08:53:13.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端页面开发总结">
+<meta name="twitter:description" content="移动端页面开发资源总结及技巧工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。一、meta标签1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）1&amp;lt;meta name=&apos;viewport&apos; content=&apos;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-sc">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://colisy.github.io/mobile/"/>
+
+
+
+
+
+  <title>移动端页面开发总结 | 每天进步一点点</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ZH-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">每天进步一点点</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Colisy</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-donate">
+          <a href="/donate/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Donate
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://colisy.github.io/mobile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Colisy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://i2.bvimg.com/634426/9f4ffa36f0a5f948t.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="每天进步一点点">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动端页面开发总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T09:46:38+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="移动端页面开发资源总结及技巧"><a href="#移动端页面开发资源总结及技巧" class="headerlink" title="移动端页面开发资源总结及技巧"></a>移动端页面开发资源总结及技巧</h1><h4 id="工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。"><a href="#工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。" class="headerlink" title="工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。"></a>工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。</h4><h2 id="一、meta标签"><a href="#一、meta标签" class="headerlink" title="一、meta标签"></a>一、meta标签</h2><h4 id="1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）"><a href="#1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）" class="headerlink" title="1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）"></a>1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'viewport'</span> content=<span class="string">'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2、移动端页面设置视口宽度等于定宽（如640px）-并禁止缩放，常用于微信浏览器页面-通常移动端设置为640-1136是最为稳妥的方式"><a href="#2、移动端页面设置视口宽度等于定宽（如640px）-并禁止缩放，常用于微信浏览器页面-通常移动端设置为640-1136是最为稳妥的方式" class="headerlink" title="2、移动端页面设置视口宽度等于定宽（如640px）,并禁止缩放，常用于微信浏览器页面(通常移动端设置为640*1136是最为稳妥的方式)"></a>2、移动端页面设置视口宽度等于定宽（如640px）,并禁止缩放，常用于微信浏览器页面(通常移动端设置为640*1136是最为稳妥的方式)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'viewport'</span> content=<span class="string">'width=640,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3、禁止将页面中的数字识别为电话号码（format-detection格式检测）"><a href="#3、禁止将页面中的数字识别为电话号码（format-detection格式检测）" class="headerlink" title="3、禁止将页面中的数字识别为电话号码（format-detection格式检测）"></a>3、禁止将页面中的数字识别为电话号码（format-detection格式检测）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'format-detection'</span> content=<span class="string">'telephont=no'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="4、忽略android平台中对邮箱地址的识别"><a href="#4、忽略android平台中对邮箱地址的识别" class="headerlink" title="4、忽略android平台中对邮箱地址的识别"></a>4、忽略android平台中对邮箱地址的识别</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'format-detection'</span> content=<span class="string">'email=no'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari"><a href="#5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari" class="headerlink" title="5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari"></a>5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'apple-mobile-web-app-capable'</span> content=<span class="string">'yes'</span> /&gt;</span><br><span class="line">&lt;!-- ios7.0版本以后，safari已看不到效果 --&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"><a href="#6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式" class="headerlink" title="6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"></a>6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">'apple-mobile-web-app-status-bar-style'</span> content=<span class="string">'black'</span> /&gt;</span><br><span class="line">&lt;!-- 可选default、black、black-translucent --&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="viewport-模板"><a href="#viewport-模板" class="headerlink" title="viewport 模板"></a>viewport 模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">&lt;meta content=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span> name=<span class="string">"viewport"</span>&gt;</span><br><span class="line">&lt;meta content=<span class="string">"yes"</span> name=<span class="string">"apple-mobile-web-app-capable"</span>&gt;</span><br><span class="line">&lt;meta content=<span class="string">"black"</span> name=<span class="string">"apple-mobile-web-app-status-bar-style"</span>&gt;</span><br><span class="line">&lt;meta content=<span class="string">"telephone=no"</span> name=<span class="string">"format-detection"</span>&gt;</span><br><span class="line">&lt;meta content=<span class="string">"email=no"</span> name=<span class="string">"format-detection"</span>&gt;</span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"index.css"</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  content...</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="二、CSS样式技巧（CSS层叠样式表，描述HTML-XML文档的呈现，元素被渲染的问题。）"><a href="#二、CSS样式技巧（CSS层叠样式表，描述HTML-XML文档的呈现，元素被渲染的问题。）" class="headerlink" title="二、CSS样式技巧（CSS层叠样式表，描述HTML/XML文档的呈现，元素被渲染的问题。）"></a>二、CSS样式技巧（CSS层叠样式表，描述HTML/XML文档的呈现，元素被渲染的问题。）</h2><h4 id="1、禁止ios和android用户选中文字"><a href="#1、禁止ios和android用户选中文字" class="headerlink" title="1、禁止ios和android用户选中文字"></a>1、禁止ios和android用户选中文字</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-user-select:none&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2、禁止ios长按时触发系统的菜单，禁止ios-amp-android长按时下载图片-callout调出"><a href="#2、禁止ios长按时触发系统的菜单，禁止ios-amp-android长按时下载图片-callout调出" class="headerlink" title="2、禁止ios长按时触发系统的菜单，禁止ios&amp;android长按时下载图片(callout调出)"></a>2、禁止ios长按时触发系统的菜单，禁止ios&amp;android长按时下载图片(callout调出)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-touch-callout:none&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3、webkit去除表单的默认样式-appearance外观"><a href="#3、webkit去除表单的默认样式-appearance外观" class="headerlink" title="3、webkit去除表单的默认样式(appearance外观)"></a>3、webkit去除表单的默认样式(appearance外观)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-appearance:none;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4、去除表单输入框placeholder的样式"><a href="#4、去除表单输入框placeholder的样式" class="headerlink" title="4、去除表单输入框placeholder的样式"></a>4、去除表单输入框placeholder的样式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">input::-webkit-input-placeholder&#123;color:<span class="comment">#000&#125;</span></span><br><span class="line">input:focus::-webkit-input-placeholder:&#123;color:<span class="comment">#fff&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="5、去除android、button、input标签被点击时产生的边框-amp-去除ios-a标签被点击时产生的半透明灰色背景"><a href="#5、去除android、button、input标签被点击时产生的边框-amp-去除ios-a标签被点击时产生的半透明灰色背景" class="headerlink" title="5、去除android、button、input标签被点击时产生的边框&amp;去除ios a标签被点击时产生的半透明灰色背景"></a>5、去除android、button、input标签被点击时产生的边框&amp;去除ios a标签被点击时产生的半透明灰色背景</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a,button,input&#123;-webkit-tap-highlight-color:rgba(0,0,0,0)&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="6、iOS使用-webkit-text-size-adjust禁止调整字体大小"><a href="#6、iOS使用-webkit-text-size-adjust禁止调整字体大小" class="headerlink" title="6、iOS使用-webkit-text-size-adjust禁止调整字体大小"></a>6、iOS使用-webkit-text-size-adjust禁止调整字体大小</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body&#123;-webkit-text-size-adjust:100% !important;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="7、android上去掉语音输入按钮-speech语音演讲"><a href="#7、android上去掉语音输入按钮-speech语音演讲" class="headerlink" title="7、android上去掉语音输入按钮(speech语音演讲)"></a>7、android上去掉语音输入按钮(speech语音演讲)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input::-webkit-input-speech-button&#123;display:none;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="8、移动端定义字体（移动端没有微软雅黑字体）"><a href="#8、移动端定义字体（移动端没有微软雅黑字体）" class="headerlink" title="8、移动端定义字体（移动端没有微软雅黑字体）"></a>8、移动端定义字体（移动端没有微软雅黑字体）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body&#123;font-family:Helvetica;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）"><a href="#9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）" class="headerlink" title="9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）"></a>9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-webkit-text-size-adjust:none;</span><br><span class="line">-webkit-transform:scale(0.9);</span><br></pre></td></tr></table></figure>
+<h4 id="10、去掉-input-type-search-搜索框默认的×号"><a href="#10、去掉-input-type-search-搜索框默认的×号" class="headerlink" title="10、去掉 input[type=search] 搜索框默认的×号"></a>10、去掉 input[type=search] 搜索框默认的×号</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">input[<span class="built_in">type</span>=<span class="string">'search'</span>]&#123;</span><br><span class="line">  -webkit-appearance:none;</span><br><span class="line">  input::-webkit-search-cancel-button&#123;</span><br><span class="line">    display:none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、其他技巧"><a href="#三、其他技巧" class="headerlink" title="三、其他技巧"></a>三、其他技巧</h2><h4 id="1、手机拍照和上传图片"><a href="#1、手机拍照和上传图片" class="headerlink" title="1、手机拍照和上传图片"></a>1、手机拍照和上传图片</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">选择照片：</span><br><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">'file'</span> accept=<span class="string">'image/*'</span> /&gt;</span><br><span class="line">选择视频：</span><br><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">'file'</span> accept=<span class="string">'video/*'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2、取消input在ios下，输入的时候英文首字母的默认大写-autocorrect自动更正capitalize以大写字母写"><a href="#2、取消input在ios下，输入的时候英文首字母的默认大写-autocorrect自动更正capitalize以大写字母写" class="headerlink" title="2、取消input在ios下，输入的时候英文首字母的默认大写(autocorrect自动更正capitalize以大写字母写)"></a>2、取消input在ios下，输入的时候英文首字母的默认大写(autocorrect自动更正capitalize以大写字母写)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">'text'</span> autocapitalize=<span class="string">'off'</span> autocorrect=<span class="string">'off'</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3、打电话发短信"><a href="#3、打电话发短信" class="headerlink" title="3、打电话发短信"></a>3、打电话发短信</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">'tel:10086'</span>&gt;打电话给：10086&lt;/a&gt;</span><br><span class="line">&lt;a href=<span class="string">'sms:10086'</span>&gt;发短信给：10086&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="四、CSS-reset"><a href="#四、CSS-reset" class="headerlink" title="四、CSS reset"></a>四、CSS reset</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/* Colisy  */</span><br><span class="line">@charset <span class="string">"utf-8"</span>;</span><br><span class="line">/* reset */</span><br><span class="line">html&#123;</span><br><span class="line">    -webkit-text-size-adjust:none;</span><br><span class="line">    -webkit-user-select:none;</span><br><span class="line">    -webkit-touch-callout: none</span><br><span class="line">    font-family: Helvetica;</span><br><span class="line">&#125;</span><br><span class="line">body&#123;font-size:12px;&#125;</span><br><span class="line">body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select&#123;margin:0; padding:0; font-weight: normal;text-indent: 0;&#125;</span><br><span class="line">a,button,input,textarea,select&#123; background: none; -webkit-tap-highlight-color:rgba(255,0,0,0); outline:none; -webkit-appearance:none;&#125;</span><br><span class="line">em&#123;font-style:normal&#125;</span><br><span class="line">li&#123;list-style:none&#125;</span><br><span class="line">a&#123;text-decoration:none;&#125;</span><br><span class="line">img&#123;border:none; vertical-align:top;&#125;</span><br><span class="line">table&#123;border-collapse:collapse;&#125;</span><br><span class="line">textarea&#123; resize:none; overflow:auto;&#125;</span><br><span class="line">/* end reset */</span><br></pre></td></tr></table></figure>
+<h2 id="五、常用的公共CSS-style"><a href="#五、常用的公共CSS-style" class="headerlink" title="五、常用的公共CSS style"></a>五、常用的公共CSS style</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">@charset <span class="string">"UTF-8"</span>;</span><br><span class="line">/* public */</span><br><span class="line"></span><br><span class="line">/* 清除浮动 */</span><br><span class="line">.clear&#123;zoom:1&#125;</span><br><span class="line">.clear:after&#123;content:<span class="string">""</span>;display:block;clear:both;&#125;</span><br><span class="line"></span><br><span class="line">/* 定义盒模型为怪异盒模型 */</span><br><span class="line">.boxSiz&#123;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  -webkit-box-sizing:border-box;</span><br><span class="line">  -moz-box-sizing:border-box;</span><br><span class="line">  -ms-box-sizing:border-box;</span><br><span class="line">  -o-box-sizing:border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 强制换行 */</span><br><span class="line">.toWrap&#123;</span><br><span class="line">  word-break: <span class="built_in">break</span>-all; /* 只对英文起作用，以字母作为换行依据 */</span><br><span class="line">  word-wrap: <span class="built_in">break</span>-word; /* 只对英文起作用，以单词作为换行依据 */</span><br><span class="line">  white-space: pre-wrap; /* 只对中文起作用，强制换行*/</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 禁止换行 */</span><br><span class="line">.noWrap&#123;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 文字超出部分显示省略号 */</span><br><span class="line">.noWrapEllipsis&#123;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 多行显示省略号，@line是行数(https://www.html5rocks.com/zh/tutorials/flexbox/quick/)*/</span><br><span class="line">.ellipsisLn&#123;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-box-orient: vertical;</span><br><span class="line">  /* line-clamp是一个不规范属性，必须与-webkit-结合。限制一个块元素文本显示的行数。与 display:-webkit-box;-webkit-box-orient必须结合*/</span><br><span class="line">  -webkit-line-clamp:@line;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 1px 边框解决方案，示例中设置上边框，可以调整 top、right、bottom、left 的值分别设置上下左右边框 */</span><br><span class="line"><span class="comment">#box2:after&#123;</span></span><br><span class="line">    content: <span class="string">" "</span>;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    height: 1px;</span><br><span class="line">    border-top: 1px solid <span class="comment">#000;</span></span><br><span class="line">    color: <span class="comment">#C7C7C7;</span></span><br><span class="line">    transform-origin: 0 0;</span><br><span class="line">    transform: scaleY(0.5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 文字两端对齐，text-justify对齐行文本进行对齐和分隔，只有IE中起作用（）*/</span><br><span class="line">.text-justify&#123;</span><br><span class="line">  text-align: justify;</span><br><span class="line">  text-justify:inter-ideograph;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 定义盒模型为 flex 布局兼容写法并让内容水平垂直居中*/</span><br><span class="line">.flex-center&#123;</span><br><span class="line">  display: box;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  display: -ms-box;</span><br><span class="line">  display: -o-box;</span><br><span class="line">  display: -moz-box;</span><br><span class="line"></span><br><span class="line">  box-pack:center;</span><br><span class="line">  -webkit-box-pack:center;</span><br><span class="line">  -o-box-pack:center;</span><br><span class="line">  -ms-box-pack:center;</span><br><span class="line">  -moz-box-pack:center;</span><br><span class="line"></span><br><span class="line">  box-align:center;</span><br><span class="line">  -webkit-box-align:center;</span><br><span class="line">  -ms-box-align:center;</span><br><span class="line">  -moz-box-align:center;</span><br><span class="line">  -o-box-align:center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* End public */</span><br></pre></td></tr></table></figure>
+<h2 id="六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）"><a href="#六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）" class="headerlink" title="六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）"></a>六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）</h2><h4 id="1、定义弹性盒模型兼容写法"><a href="#1、定义弹性盒模型兼容写法" class="headerlink" title="1、定义弹性盒模型兼容写法"></a>1、定义弹性盒模型兼容写法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  box</span><br><span class="line">  inline-box</span><br><span class="line">*/</span><br><span class="line">display: box;</span><br><span class="line">display: -webkit-box;</span><br><span class="line">display: -ms-box;</span><br><span class="line">display: -o-box;</span><br><span class="line">display: -moz-box;</span><br></pre></td></tr></table></figure>
+<h4 id="2、box-orient-定义盒模型内伸缩项目的布局方向"><a href="#2、box-orient-定义盒模型内伸缩项目的布局方向" class="headerlink" title="2、box-orient 定义盒模型内伸缩项目的布局方向"></a>2、box-orient 定义盒模型内伸缩项目的布局方向</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  vertical column</span><br><span class="line">  horizontal row</span><br><span class="line">*/</span><br><span class="line">box-orient: horizontal;</span><br><span class="line">-webkit-box-orient: horizontal;</span><br><span class="line">-ms-box-orient: horizontal;</span><br><span class="line">-o-box-orient: horizontal;</span><br><span class="line">-moz-box-orient: horizontal;</span><br></pre></td></tr></table></figure>
+<h4 id="3、box-direction-定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）"><a href="#3、box-direction-定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）" class="headerlink" title="3、box-direction 定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）"></a>3、box-direction 定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* firefox */</span><br><span class="line">-moz-box-direction:reverse;</span><br><span class="line">/* chrome、safari、opera */</span><br><span class="line">-webkit-box-direction:reverse;</span><br></pre></td></tr></table></figure>
+<h4 id="4、box-pack-对盒子水平富裕空间的管理"><a href="#4、box-pack-对盒子水平富裕空间的管理" class="headerlink" title="4、box-pack 对盒子水平富裕空间的管理"></a>4、box-pack 对盒子水平富裕空间的管理</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  start</span><br><span class="line">  end</span><br><span class="line">  center</span><br><span class="line">  justify</span><br><span class="line">*/</span><br><span class="line">-webkit-box-pack: center;</span><br><span class="line">-moz-box-pack: center;</span><br><span class="line">-ms-flex-pack: center;</span><br><span class="line">-o-box-pack: center;</span><br><span class="line">box-pack: center;</span><br></pre></td></tr></table></figure>
+<h4 id="5、box-align-对盒子垂直富裕空间的管理"><a href="#5、box-align-对盒子垂直富裕空间的管理" class="headerlink" title="5、box-align 对盒子垂直富裕空间的管理"></a>5、box-align 对盒子垂直富裕空间的管理</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  start</span><br><span class="line">  end</span><br><span class="line">  center</span><br><span class="line">*/</span><br><span class="line">-webkit-box-align: center;</span><br><span class="line">-moz-box-align: center;</span><br><span class="line">-ms-flex-align: center;</span><br><span class="line">-o-box-align: center;</span><br><span class="line">box-align: center;</span><br></pre></td></tr></table></figure>
+<h4 id="6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）"><a href="#6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）" class="headerlink" title="6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）"></a>6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.box div:nth-of-type(1)&#123;</span><br><span class="line">  /* Safari 和 Chrome */</span><br><span class="line">   -webkit-box-ordinal-group:1;</span><br><span class="line">   /* Firefox */</span><br><span class="line">   -moz-box-ordinal-group:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="7、box-flex定义伸缩项目占空间的份数"><a href="#7、box-flex定义伸缩项目占空间的份数" class="headerlink" title="7、box-flex定义伸缩项目占空间的份数"></a>7、box-flex定义伸缩项目占空间的份数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.box div:nth-of-type(1)&#123;</span><br><span class="line">  /* Safari 和 Chrome */</span><br><span class="line">   -webkit-box-flex:1;</span><br><span class="line">   /* Firefox */</span><br><span class="line">   -moz-box-flex:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!--  -->
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://i2.bvimg.com/634426/9f4ffa36f0a5f948t.jpg"
+               alt="Colisy" />
+          <p class="site-author-name" itemprop="name">Colisy</p>
+           
+              <p class="site-description motion-element" itemprop="description">简单点、做自己</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/5378633293/profile?topnav=1&wvr=6" target="_blank" title="微博">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                    
+                      微博
+                    
+                </a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Colisy" target="_blank" title="Github">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.jianshu.com/u/129d3813274d" target="_blank" title="简书">
+                  
+                    <i class="fa fa-opencart"></i>
+                  
+                    
+                      简书
+                    
+                </a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/xiao-huai-99/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-gg-circle"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span><br>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端页面开发资源总结及技巧"><span class="nav-number">1.</span> <span class="nav-text">移动端页面开发资源总结及技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">工作中常用到的移动端问题记录下来，以便后用。内容不完善，以后遇到问题会一直更新的。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、meta标签"><span class="nav-number">1.1.</span> <span class="nav-text">一、meta标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">1、移动端页面设置视口宽度等于设备宽度，并禁止缩放（viewport视窗）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、移动端页面设置视口宽度等于定宽（如640px）-并禁止缩放，常用于微信浏览器页面-通常移动端设置为640-1136是最为稳妥的方式"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">2、移动端页面设置视口宽度等于定宽（如640px）,并禁止缩放，常用于微信浏览器页面(通常移动端设置为640*1136是最为稳妥的方式)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、禁止将页面中的数字识别为电话号码（format-detection格式检测）"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">3、禁止将页面中的数字识别为电话号码（format-detection格式检测）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、忽略android平台中对邮箱地址的识别"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">4、忽略android平台中对邮箱地址的识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viewport-模板"><span class="nav-number">1.2.</span> <span class="nav-text">viewport 模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、CSS样式技巧（CSS层叠样式表，描述HTML-XML文档的呈现，元素被渲染的问题。）"><span class="nav-number">1.3.</span> <span class="nav-text">二、CSS样式技巧（CSS层叠样式表，描述HTML/XML文档的呈现，元素被渲染的问题。）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、禁止ios和android用户选中文字"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">1、禁止ios和android用户选中文字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、禁止ios长按时触发系统的菜单，禁止ios-amp-android长按时下载图片-callout调出"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">2、禁止ios长按时触发系统的菜单，禁止ios&amp;android长按时下载图片(callout调出)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、webkit去除表单的默认样式-appearance外观"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">3、webkit去除表单的默认样式(appearance外观)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、去除表单输入框placeholder的样式"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">4、去除表单输入框placeholder的样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、去除android、button、input标签被点击时产生的边框-amp-去除ios-a标签被点击时产生的半透明灰色背景"><span class="nav-number">1.3.0.5.</span> <span class="nav-text">5、去除android、button、input标签被点击时产生的边框&amp;去除ios a标签被点击时产生的半透明灰色背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、iOS使用-webkit-text-size-adjust禁止调整字体大小"><span class="nav-number">1.3.0.6.</span> <span class="nav-text">6、iOS使用-webkit-text-size-adjust禁止调整字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、android上去掉语音输入按钮-speech语音演讲"><span class="nav-number">1.3.0.7.</span> <span class="nav-text">7、android上去掉语音输入按钮(speech语音演讲)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、移动端定义字体（移动端没有微软雅黑字体）"><span class="nav-number">1.3.0.8.</span> <span class="nav-text">8、移动端定义字体（移动端没有微软雅黑字体）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）"><span class="nav-number">1.3.0.9.</span> <span class="nav-text">9、webkit内核浏览器的文字大小调整功能（webkit内核最小字体12px）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10、去掉-input-type-search-搜索框默认的×号"><span class="nav-number">1.3.0.10.</span> <span class="nav-text">10、去掉 input[type=search] 搜索框默认的×号</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、其他技巧"><span class="nav-number">1.4.</span> <span class="nav-text">三、其他技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、手机拍照和上传图片"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">1、手机拍照和上传图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、取消input在ios下，输入的时候英文首字母的默认大写-autocorrect自动更正capitalize以大写字母写"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">2、取消input在ios下，输入的时候英文首字母的默认大写(autocorrect自动更正capitalize以大写字母写)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、打电话发短信"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">3、打电话发短信</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、CSS-reset"><span class="nav-number">1.5.</span> <span class="nav-text">四、CSS reset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、常用的公共CSS-style"><span class="nav-number">1.6.</span> <span class="nav-text">五、常用的公共CSS style</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）"><span class="nav-number">1.7.</span> <span class="nav-text">六、flex布局（2009年盒模型，只兼容老式的手机，目前使用2012年的flex）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、定义弹性盒模型兼容写法"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">1、定义弹性盒模型兼容写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、box-orient-定义盒模型内伸缩项目的布局方向"><span class="nav-number">1.7.0.2.</span> <span class="nav-text">2、box-orient 定义盒模型内伸缩项目的布局方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、box-direction-定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）"><span class="nav-number">1.7.0.3.</span> <span class="nav-text">3、box-direction 定义盒模型内伸缩项目的正序（normal默认值）、倒叙（reverse）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、box-pack-对盒子水平富裕空间的管理"><span class="nav-number">1.7.0.4.</span> <span class="nav-text">4、box-pack 对盒子水平富裕空间的管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、box-align-对盒子垂直富裕空间的管理"><span class="nav-number">1.7.0.5.</span> <span class="nav-text">5、box-align 对盒子垂直富裕空间的管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）"><span class="nav-number">1.7.0.6.</span> <span class="nav-text">6、box-ordinal-group定义伸缩项目的具体位置（ordinal序数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、box-flex定义伸缩项目占空间的份数"><span class="nav-number">1.7.0.7.</span> <span class="nav-text">7、box-flex定义伸缩项目占空间的份数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Colisy</span>
+</div>
+
+        
+
+      
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
