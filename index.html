@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="ZH-CN">
+<html class="theme-next pisces use-motion" lang="ZH-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -111,7 +111,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -202,11 +202,21 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/archives/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
           </a>
         </li>
       
@@ -263,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://colisy.github.io/mongodb/">
+    <link itemprop="mainEntityOfPage" href="https://colisy.github.io/mongodb-grammer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Colisy">
@@ -282,7 +292,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mongodb/" itemprop="url">mongodb的安装下载使用步骤</a></h1>
+                <a class="post-title-link" href="/mongodb-grammer/" itemprop="url">nodejs对mongodb基本操作</a></h1>
         
 
         <div class="post-meta">
@@ -292,7 +302,129 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-09T10:53:08+08:00">
+                2018-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="nodejs对mongodb基本操作"><a href="#nodejs对mongodb基本操作" class="headerlink" title="nodejs对mongodb基本操作"></a>nodejs对mongodb基本操作</h2><h4 id="1、连接数据库"><a href="#1、连接数据库" class="headerlink" title="1、连接数据库"></a>1、连接数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 安装mongodb</span></span><br><span class="line">npm install -g mongodb --save</span><br><span class="line"><span class="comment">### 引入mongodb</span></span><br><span class="line">var MongoClient=require(<span class="string">'mongodb'</span>).MongoClient;</span><br><span class="line"><span class="comment">### local是你数据库的名称 27017是mongodb默认端口</span></span><br><span class="line">var DB_CONN_STR=<span class="string">'mongodb://localhost:27017/local'</span></span><br><span class="line"><span class="comment">### 连接mongodb 要配合发送请求app.get(url,(req,res)=&gt;&#123;&#125;)使用</span></span><br><span class="line">MongoClient.collect(DB_CONN_STR,(err,db)=&gt;&#123;</span><br><span class="line">  inDataBase(db,(result)=&gt;&#123;</span><br><span class="line">    res.send(result); <span class="comment">### res.json(&#123;&#125;);将数据返回前端</span></span><br><span class="line">    db.close();</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="2、创建数据表"><a href="#2、创建数据表" class="headerlink" title="2、创建数据表"></a>2、创建数据表</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### database数据表</span></span><br><span class="line">const collection=db.collection(database)</span><br></pre></td></tr></table></figure>
+<h4 id="3、实现对数据表的增删改查"><a href="#3、实现对数据表的增删改查" class="headerlink" title="3、实现对数据表的增删改查"></a>3、实现对数据表的增删改查</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### callback对返回数据经行处理。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 增加一条数据 obj&#123;&#125;插入的数据</span></span><br><span class="line">collection.insert(obj,(err,data)=&gt;&#123;</span><br><span class="line">  <span class="keyword">if</span>(err) console.error(err)</span><br><span class="line">  callback(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">###删除一条数据</span></span><br><span class="line">collection.remove(obj,(err,data)=&gt;&#123;</span><br><span class="line">  <span class="keyword">if</span>(err) console.error(err)</span><br><span class="line">  callback(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 修改一条数据</span></span><br><span class="line">var updateObj=&#123;</span><br><span class="line">  <span class="variable">$set</span>:&#123;</span><br><span class="line">    <span class="comment">### 所要修改的内容</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">collection.update(obj,updateObj,(err,data)=&gt;&#123;</span><br><span class="line">  <span class="keyword">if</span>(err) console.error(err)</span><br><span class="line">  callback(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">###查找一条数据</span></span><br><span class="line">collection.find(obj).toArray((err,data)=&gt;&#123;</span><br><span class="line">  <span class="keyword">if</span>(err) console.error(err)</span><br><span class="line">  callback(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://colisy.github.io/mongodb-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Colisy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://i2.bvimg.com/634426/9f4ffa36f0a5f948t.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="每天进步一点点">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/mongodb-install/" itemprop="url">mongodb的安装下载使用步骤</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-08T19:02:37+08:00">
                 2018-03-08
@@ -334,7 +466,24 @@
       
         
           
-            
+            <p>初学mongodb</p>
+<h3 id="1、查看电脑操作系统"><a href="#1、查看电脑操作系统" class="headerlink" title="1、查看电脑操作系统"></a>1、查看电脑操作系统</h3><p><img src="http://i1.bvimg.com/634426/758503e6fe49fb63s.png" alt="Markdown"></p>
+<h3 id="2、在mongodb官网下载相应电脑操作系统的mongodb。"><a href="#2、在mongodb官网下载相应电脑操作系统的mongodb。" class="headerlink" title="2、在mongodb官网下载相应电脑操作系统的mongodb。"></a>2、在mongodb官网下载相应电脑操作系统的mongodb。</h3><p><img src="http://i1.bvimg.com/634426/3fa58a51abb91905s.png" alt="Markdown"></p>
+<h3 id="3、按照下图方式进行安装"><a href="#3、按照下图方式进行安装" class="headerlink" title="3、按照下图方式进行安装"></a>3、按照下图方式进行安装</h3><p><img src="http://i4.bvimg.com/634426/efeb0b40a8b3662cs.png" alt="Markdown"></p>
+<p><img src="http://i4.bvimg.com/634426/0f8a149a7279099es.png" alt="Markdown"></p>
+<p><img src="http://i4.bvimg.com/634426/f17c9e26d7091989s.png" alt="Markdown"></p>
+<p><img src="http://i4.bvimg.com/634426/2f4224b3871aa268.png" alt="Markdown"></p>
+<p><img src="http://i4.bvimg.com/634426/75411d9cc88d2949s.png" alt="Markdown"></p>
+<p><img src="http://i4.bvimg.com/634426/604e75c30171bd37s.png" alt="Markdown"></p>
+<p>安装完成的样子</p>
+<p><img src="http://i2.bvimg.com/634426/4ddaab80fed18361s.png" alt="Markdown"></p>
+<h3 id="4、安装完对文件进行修改配置"><a href="#4、安装完对文件进行修改配置" class="headerlink" title="4、安装完对文件进行修改配置"></a>4、安装完对文件进行修改配置</h3><h4 id="1）、在Mongo文件夹新增：data文件夹、logs文件夹、mongo-conf-文件。（logs里面新增mongo-log文件）"><a href="#1）、在Mongo文件夹新增：data文件夹、logs文件夹、mongo-conf-文件。（logs里面新增mongo-log文件）" class="headerlink" title="1）、在Mongo文件夹新增：data文件夹、logs文件夹、mongo.conf 文件。（logs里面新增mongo.log文件）"></a>1）、在Mongo文件夹新增：data文件夹、logs文件夹、mongo.conf 文件。（logs里面新增mongo.log文件）</h4><p><img src="http://i2.bvimg.com/634426/02baadeacc53e0b8s.png" alt="Markdown"></p>
+<h4 id="2）、mongo-conf文件里面的内容配置"><a href="#2）、mongo-conf文件里面的内容配置" class="headerlink" title="2）、mongo.conf文件里面的内容配置"></a>2）、mongo.conf文件里面的内容配置</h4><p><img src="http://i2.bvimg.com/634426/981bd784047d220cs.png" alt="Markdown"></p>
+<h4 id="3）、配置完成在浏览器里面打开应该是这个样子"><a href="#3）、配置完成在浏览器里面打开应该是这个样子" class="headerlink" title="3）、配置完成在浏览器里面打开应该是这个样子"></a>3）、配置完成在浏览器里面打开应该是这个样子</h4><p><img src="http://i4.bvimg.com/634426/d21ee10f6f6d864bs.png" alt="Markdown"></p>
+<p>如果每次都如上操作，岂不是相当麻烦，按照如下命令来创建并启动MongoDB服务，就可以通过windows服务来管理MongoDB的启动和关闭了</p>
+<p>mongod –config “D:\Mongo\mongo.conf”  –install –serviceName “MongoDB”<br>net start MongoDB</p>
+<h3 id="5、安装mongoVue用来配合mongodb一起使用"><a href="#5、安装mongoVue用来配合mongodb一起使用" class="headerlink" title="5、安装mongoVue用来配合mongodb一起使用"></a>5、安装mongoVue用来配合mongodb一起使用</h3><p><img src="http://i4.bvimg.com/634426/356aa350c77d2348s.png" alt="Markdown"></p>
+
           
         
       
@@ -411,7 +560,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T09:46:38+08:00">
                 2018-03-02
@@ -560,7 +709,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-29T15:30:47+08:00">
                 2017-12-29
@@ -683,9 +832,9 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -697,8 +846,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -866,6 +1015,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
 
   
     <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
